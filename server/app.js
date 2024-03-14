@@ -12,7 +12,7 @@ ViteExpress.config({ printViteDevServerHost: true });
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(session({ secret: 'ssshhhhh', saveUninitialized: true, resave: false }));
+app.use(session({ secret: process.env.SESSION_SECRET, saveUninitialized: true, resave: false }));
 
 app.use(router);
 
