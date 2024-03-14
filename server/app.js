@@ -6,7 +6,7 @@ import router from './routes/index.js';
 import 'dotenv/config.js';
 
 const app = express();
-const port = '4090';
+const PORT = '5090';
 ViteExpress.config({ printViteDevServerHost: true });
 
 app.use(morgan('dev'));
@@ -17,4 +17,4 @@ app.use(session({ secret: process.env.SESSION_SECRET, saveUninitialized: true, r
 app.use(router);
 
 
-ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));
+ViteExpress.listen(app, PORT, () => console.log(`Server is listening on http://localhost:${PORT}`));
