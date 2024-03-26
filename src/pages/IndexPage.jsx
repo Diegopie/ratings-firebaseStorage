@@ -27,7 +27,7 @@ export default function IndexPage() {
     const imgRef = ref(storage, `images/${userImg.name}_${uuidv4()}`);
     // uploadBytes takes to args(where to store in bucket: ref, imageToUpload)
     uploadBytes(imgRef, userImg).then((snapshot) => {
-      // console.log(snapshot);
+      console.log(snapshot);
 
       // getDownloadURL takes one arg (refToQuery)
       getDownloadURL(imgRef).then(async (url) => {

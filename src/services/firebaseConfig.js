@@ -13,7 +13,7 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_appId
 };
 
-// Initialize Firebase
+// Initialize Firebase 
 const firebaseApp = initializeApp(firebaseConfig);
 // Our Reference to Our Firebase App Storage
 export const storage = getStorage(firebaseApp);
