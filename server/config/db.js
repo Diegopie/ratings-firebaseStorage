@@ -1,5 +1,7 @@
 import { Sequelize } from 'sequelize';
 
+const dbURI = process.env.dbURI || 'postgresql:///ratings';
+
 async function connectToDB(dbURI) {
   console.log(`Connecting to DB: ${dbURI}`);
 
@@ -21,4 +23,4 @@ async function connectToDB(dbURI) {
   return sequelize;
 }
 
-export const db = await connectToDB('postgresql:///ratings');
+export const db = await connectToDB('postgres://diego:password1234@movies.cryq2ogyuscu.us-west-1.rds.amazonaws.com:5432/movies');
