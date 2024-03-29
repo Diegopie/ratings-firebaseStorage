@@ -1,11 +1,5 @@
 import { Sequelize } from 'sequelize';
 
-const { Pool } = require('pg');
-const pool = new Pool({
-    connectionString: process.env.SCHEMATOGO_URL
-});
-
-
 // const dbURI = process.env.dbURI || 'postgresql:///ratings';
 
 async function connectToDB(dbURI) {
